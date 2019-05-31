@@ -78,7 +78,6 @@
     gtag('config', 'UA-100715169-10');
   </script>
 
-
   <!-- Google reCAPTCHA -->
   <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer></script>
   <script src="https://unpkg.com/vue-recaptcha@latest/dist/vue-recaptcha.min.js"></script>
@@ -200,9 +199,9 @@
             <vue-recaptcha ref="recaptcha" @verify="onCaptchaVerified"
                             @expired="onCaptchaExpired" size="invisible"
                             sitekey="6LdSkKQUAAAAAOXWN_tbnvWy0fOdW8kzp922Vzys">
-              <button class="ui button color2" type="submit"
-                      v-bind:class="{loading: submit_loading==true, disabled: submit_disabled==true}">Submit</button>
             </vue-recaptcha>
+            <button class="ui button color2" type="submit"
+                    v-bind:class="{loading: submit_loading==true, disabled: submit_disabled==true}">Submit</button>
           </div>        
         </form>
       </div>
